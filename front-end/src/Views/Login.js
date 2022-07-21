@@ -1,22 +1,54 @@
 import styled from 'styled-components'
 import BGMobile from '../img/bgMobile.png'
 import LogoSecond from '../img/LogoSecond.png'
+import { useFormik } from "formik";
+import * as yup from 'yup'
+import { toast } from 'react-toastify';
+import { LoginAuth } from '../services/login';
+import { FirebaseError } from 'firebase/app';
+import { AuthErrorCodes } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom'
 export function LoginView() {
+    const navigate = useNavigate()
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+            password: '',
+        },
+        onSubmit: async (values) => {
+            try {
+                const userLoging = await LoginAuth(values)
+                toast.success('Logado com sucesso!')
+                navigate('/')
+            } catch (error) {
+                const errorMsg = error instanceof FirebaseError && (error.code === AuthErrorCodes.INVALID_PASSWORD || error.code === AuthErrorCodes.USER_DELETED)
+                    ? 'Login ou senha inválidos.'
+                    : 'Falha ao fazer login. Tente novamente.'
+                toast.error(errorMsg)
+            }
+        }
+    })
     return (
         <MainStyled>
             <StyledSectionLogin>
                 <img src={LogoSecond} alt='Logo SecondMind' width={280} />
                 <h1>Seja Bem Vindo!</h1>
-                <FormStyled>
+                <FormStyled onSubmit={formik.handleSubmit}>
                     <FormGroupInput>
                         <label>Email</label>
-                        <input placeholder='✉ Insira seu email' />
+                        <input
+                            placeholder='✉ Insira seu email'
+                            type='email'
+                            {...formik.getFieldProps('email')}
+                        />
                     </FormGroupInput>
                     <FormGroupInput className='pb-3'>
                         <label>Senha</label>
                         <input
                             placeholder='🔒 Insira sua senha'
-                            type='password' />
+                            type='password'
+                            {...formik.getFieldProps('password')}
+                        />
                     </FormGroupInput>
                     <button type='submit'>Entrar</button>
                     <span>Esqueceu a senha?</span>
