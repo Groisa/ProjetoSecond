@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import BGMobile from '../img/bgMobile.png'
+import BGDesk from '../img/bgDesktop.png'
 import LogoSecond from '../img/LogoSecond.png'
 import { useFormik } from "formik";
 import * as yup from 'yup'
@@ -51,7 +52,7 @@ export function LoginView() {
                         />
                     </FormGroupInput>
                     <button type='submit'>Entrar</button>
-                    <span>Esqueceu a senha?</span>
+                    <a href=''>Esqueceu a senha?</a>
                 </FormStyled>
             </StyledSectionLogin>
         </MainStyled>
@@ -73,9 +74,14 @@ const FormStyled = styled.form`
         padding: 5px;
         border-radius: 15px;
     }
-    span {
+    a {
         font-size: .8rem;
         padding: 10px;
+    }
+    @media(min-width: 768px) {
+        button {
+            width: 30%;
+        }
     }
 `
 const FormGroupInput = styled.div`
@@ -104,6 +110,18 @@ const FormGroupInput = styled.div`
         font-weight: 600;
         font-family: Arial, Helvetica, sans-serif;
     }
+    @media(min-width: 768px) {
+        label {
+            font-size: 15px;
+        }
+        input {
+            padding: 1.1rem;
+            font-size: 1.2rem;
+            ::placeholder {
+            font-size: 1.2rem;
+        }
+        }
+    }
 `
 const MainStyled = styled.main`
     width: 100vw;
@@ -115,6 +133,11 @@ const MainStyled = styled.main`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media(min-width: 576px) {
+        background-image: url(${BGDesk});
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 `
 const StyledSectionLogin = styled.section`
     border-radius: 1.4rem ;
@@ -130,4 +153,14 @@ const StyledSectionLogin = styled.section`
         font-weight: 700;
         padding-top: 1rem;
     } 
+    @media(min-width: 768px) {
+        width: 48.4rem ;
+        img {
+            width: 572px;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        
+    }
 `
