@@ -3,7 +3,6 @@ import BGMobile from '../img/bgMobile.png'
 import BGDesk from '../img/bgDesktop.png'
 import LogoSecond from '../img/LogoSecond.png'
 import { useFormik } from "formik";
-import * as yup from 'yup'
 import { toast } from 'react-toastify';
 import { LoginAuth } from '../services/login';
 import { FirebaseError } from 'firebase/app';
@@ -48,6 +47,7 @@ export function LoginView() {
                         <input
                             placeholder='🔒 Insira sua senha'
                             type='password'
+                            required
                             {...formik.getFieldProps('password')}
                         />
                     </FormGroupInput>

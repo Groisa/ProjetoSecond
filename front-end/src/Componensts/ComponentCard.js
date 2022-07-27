@@ -23,7 +23,7 @@ export function ComponentCardView() {
                     </div>
                     <p>BurnDown</p>
                 </CardComponentStyledSecond>
-                <CardComponentStyledSecond>
+                <CardComponentStyledSecond as={Link} to='/newHour'>
                     <div>
                         <img src={CronogramaHoras} alt='Icone da tela de Controle de horas' />
                     </div>

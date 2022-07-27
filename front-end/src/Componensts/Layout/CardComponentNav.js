@@ -8,7 +8,7 @@ import Users from '../../img/Users.png'
 import { FaCog, FaHome, FaRegShareSquare } from "react-icons/fa";
 import { logoutUser } from "../../services/logout";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export function CardComponentNavView() {
@@ -22,7 +22,7 @@ export function CardComponentNavView() {
     }
     return (
         <>
-            <CardComponentNav>
+            <CardComponentNav as={Link} to='/controle-minhas-horas' >
                 <img src={MinhasHoras} alt='Minhas Horas' />
                 <p>Minhas Horas</p>
             </CardComponentNav>
@@ -30,7 +30,7 @@ export function CardComponentNavView() {
                 <img src={BurnDown} alt='BurnDown' />
                 <p>BurnDown</p>
             </CardComponentNav>
-            <CardComponentNav>
+            <CardComponentNav as={Link} to='/newHour'>
                 <img src={CronogramaHoras} alt='Controle de Horas' />
                 <p>Controle de Horas</p>
             </CardComponentNav>

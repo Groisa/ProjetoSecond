@@ -5,6 +5,7 @@ import { auth } from "./services/firebase";
 import { ControlHoursViews } from "./Views/ControlHours";
 import { HomeView } from "./Views/Home";
 import { LoginView } from "./Views/Login";
+import { NewHourView } from "./Views/NewHour";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Route path="/" element={<HomeView/>}/>
       <Route path='/login' element={<LoginView/>}/>
       <Route path='/controle-minhas-horas' element={<ControlHoursViews/>}/>
+      <Route path='/newHour' element={<NewHourView/>}/>
     </Routes>
   );
 }

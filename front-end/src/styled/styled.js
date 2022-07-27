@@ -2,7 +2,8 @@ import BgMobileHome from '../img/bgMobileHome.png'
 import styled from 'styled-components'
 import bgMobileHomeDesk from '../img/bgMobileHomeDesk.png'
 import bgDesktop from '../img/bgDesktop.png'
-import { Container, Navbar } from 'react-bootstrap'
+import { Container, Form, Modal, Navbar } from 'react-bootstrap'
+import { FaMapPin } from 'react-icons/fa'
 
 
 export const DivIconStyled = styled.div`
@@ -168,10 +169,10 @@ export const CardSectionStyled = styled.div`
     padding-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
-    width: 327px;
+    width: 330px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 17px;
     @media(min-width: 972px) {
         flex-wrap: nowrap;
         width: 692px;
@@ -193,6 +194,8 @@ export const CardComponentStyledSecond = styled.div`
     box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     text-align: center;
+    text-decoration: none;
+    color: #000;
     p {
         padding-bottom: 20px;
     }
@@ -294,7 +297,9 @@ export const CardComponentNav = styled.div`
     text-align: center;
     font-size: 20px;
     font-weight: 400;
-    padding: 8px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
     img {
         width: 38px;
         height: 38px;
@@ -415,4 +420,161 @@ export const DataHours = styled.div`
 export const ImgGrafic = styled.img`
     width: 326px;
     height: 198px;
+`
+export const ButtonNewOur = styled.button`
+    width: 286.1px;
+    height: 43.62px;
+    background: rgba(1, 1, 78, 0.1);
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin-bottom: 15px ;
+    border: none;
+    font-size: 20px;
+    :hover {
+        background: rgba(10, 20, 50, 0.1);
+    }
+`
+export const SectionInputPesqDate = styled.section`
+    input {
+        width: 105px;
+        height: 24px;
+        border: solid 1px;
+        border-color: #000;
+        border-radius: 20px;
+        font-size: 15px !important;
+        display: flex;
+        text-align: center;
+    }
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    gap: 10px;
+    justify-content: center;
+    p {
+        font-size: 25px;
+        padding: 0;
+        margin: 0;
+    }
+`
+export const TableStyled = styled.table`
+    background: rgba(1, 1, 78, 0.3);
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 319px;
+    thead {
+        justify-content: center;
+        text-align: center;
+        tr {
+            th {
+                color: #fff;
+                text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.4);
+                font-size: 20px;
+            }
+        }
+    }
+    tbody {
+        justify-content: center;
+        text-align: center;       
+        tr {   
+            td {
+                color: #fff;
+                text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.4);
+                font-size: 18px;
+            }
+        }
+    }
+`
+export const ButtonsControledTable = styled.div`
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    button {
+        background: rgba(1, 1, 78, 0.1);
+        box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        border: none;
+        width: 84px;
+        height: 26px;
+    }
+    p{
+        padding: 0;
+        margin: 0;
+    }
+
+`
+export const StyledPin = styled(FaMapPin)`
+    cursor: pointer;
+    :hover {
+        color: #000;
+    }
+`
+export const ModalTitle = styled.div`
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+        img {
+            width: 66px;
+            height: 66px;
+        }
+        h1 {
+            font-size: 25px;
+            font-weight: 400;
+            padding: 0;
+            margin: 0;
+        }
+        @media(min-width: 572px) {
+            h1 {
+            font-size: 35px;
+            font-weight: 400;
+            padding: 0;
+            margin: 0;
+        }
+        font-size: 25px;
+        img {
+            width: 76px;
+            height: 76px;
+        }
+        }
+`
+export const ModalStyled = styled(Modal)`
+    color: #fff;
+`
+export const ModalHeader = styled(Modal.Header)`
+    background-color: #3D3434;
+`
+export const ModalBody = styled(Modal.Body)`
+    background-color: #3D3434;
+    button {
+        margin-top: 10px;
+        width: 147px;
+        height: 42px;
+        background-color: #fff;
+        color: #000;
+        border-radius: 20px;
+    }
+`
+export const ModalFormControl = styled(Form.Control)`
+    width: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+    border-color: #fff;
+    color: #fff;
+    display: flex;
+`
+export const ModalFormControlSelect = styled(Form.Select)`
+    width: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+    border-color: #fff;
+    color: #fff;
+    display: flex;
+    option {
+        background-color: #3D3434;
+        width: 80%;
+    }
 `
