@@ -1,4 +1,4 @@
-import { NavBrandStyled, Header, DivIconStyled, DivSectionHeader, MainStyledLayout, OffCanvasContainer } from '../../styled/styled'
+import { NavBrandStyled, Header, DivIconStyled, DivSectionHeader, MainStyledLayout, OffCanvasContainer, LayoutStyled } from '../../styled/styled'
 import { Container, Navbar, Offcanvas } from "react-bootstrap";
 import LogoSecond from '../../img/SecondBlack.png'
 import { Link } from 'react-router-dom'
@@ -13,7 +13,7 @@ export function Layout({ children }) {
         toast.success('Deslogado com sucesso!')
     }
     return (
-        <>
+        <LayoutStyled>
             <Header>
                 <Navbar expand={false}>
                     <Container className='p-0 m-0'>
@@ -57,6 +57,6 @@ export function Layout({ children }) {
             <MainStyledLayout>
                 {children}
             </MainStyledLayout>
-        </>
+        </LayoutStyled>
     )
 }

@@ -234,22 +234,47 @@ export const DivSeparetorStyled = styled.div`
         width: 500px;
     }
 `
+export const DivSeparetorStyledPrimary = styled.div`
+    width: 322px;
+    height: 1px;
+    margin-bottom: 20px;
+    background-color: #000;
+    @media(min-width: 572px) {
+        width: 522px;
+    }
+    @media(min-width: 972px) {
+        width: 522px;
+    }
+`
 export const NavBrandStyled = styled(Navbar.Brand)`
     img {
         width: 170px;
         height: 15px;
     }
+    @media(min-width: 572px) {
+        img {
+            width: 370px;
+            height: 30px; 
+        }
+    }
 `
-export const Header = styled(Container)`
+export const Header = styled.header`
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
     box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding: 0 15px;
+   @media(min-width: 572px){ 
+     padding: 15px 30px;
+   }
+   font-size: 25px;
 `
 export const MainStyledLayout = styled.main`
     padding-top: 6rem;
+    
 `
 export const OffCanvasContainer = styled.div`
     border: solid 1px;
@@ -279,4 +304,115 @@ export const CardComponentNav = styled.div`
         margin: 0;
         padding: 0;
     }
+`
+export const LayoutStyled = styled.div`
+    background-image: url(${BgMobileHome});
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    @media(min-width: 572px) {
+        background-image: url(${bgMobileHomeDesk});
+    }
+    @media(min-width: 972px) {
+        background-image: url(${bgDesktop});
+        width: 100%;
+        height: 100%;
+    }
+`
+export const TitleStyled = styled.div`
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2.5rem;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+        img {
+            width: 66px;
+            height: 66px;
+        }
+        h1 {
+            font-size: 25px;
+            font-weight: 400;
+            padding: 0;
+            margin: 0;
+        }
+        @media(min-width: 572px) {
+            h1 {
+            font-size: 35px;
+            font-weight: 400;
+            padding: 0;
+            margin: 0;
+        }
+        img {
+            width: 76px;
+            height: 76px;
+        }
+        }
+`
+export const ContainerStyled = styled(Container)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    padding-bottom: 30px;
+   @media(min-width: 572px) {
+    padding-bottom: 50px;
+   }
+`
+export const DataHoursTotal = styled.div`
+    width: 161px;
+    height: 77px;
+    padding-top: 2px;
+    background: rgba(1, 1, 78, 0.1);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    div {
+        width: 120px;
+        height: 1px;
+        background-color: #000;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 18px;
+    }
+    
+`
+export const DataHours = styled.div`
+    width: 171px;
+    height: 77px;
+    padding-top: 2px;
+    background: rgba(1, 1, 78, 0.1);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    div {
+        width: 120px;
+        height: 1px;
+        background-color: #000;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 18px;
+    }
+`
+export const ImgGrafic = styled.img`
+    width: 326px;
+    height: 198px;
 `
