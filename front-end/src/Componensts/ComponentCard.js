@@ -5,10 +5,11 @@ import CronogramaHoras from '../img/CronogramaHoras.png'
 import Projetos from '../img/Projetos.png'
 import Clientes from '../img/Clientes.png'
 import Users from '../img/Users.png'
+import { Link } from 'react-router-dom'
 export function ComponentCardView() {
     return (
         <CardContainer>
-            <CardComponentStyled>
+            <CardComponentStyled as={Link} to='/controle-minhas-horas'>
                 <div>
                     <img src={MinhasHoras} alt='Icone da tela de Minhas Horas' />
                 </div>

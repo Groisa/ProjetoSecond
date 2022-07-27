@@ -2,6 +2,7 @@ import BgMobileHome from '../img/bgMobileHome.png'
 import styled from 'styled-components'
 import bgMobileHomeDesk from '../img/bgMobileHomeDesk.png'
 import bgDesktop from '../img/bgDesktop.png'
+import { Container, Navbar } from 'react-bootstrap'
 
 
 export const DivIconStyled = styled.div`
@@ -10,6 +11,7 @@ export const DivIconStyled = styled.div`
     align-items: center;
     flex-direction: column;
     font-size: 1rem;
+    cursor: pointer;
     p {
         padding: 0;
         margin: 0;
@@ -21,7 +23,7 @@ export const DivIconStyled = styled.div`
         margin: 0;
     }
 `
-export const ContainerHome = styled.body`
+export const ContainerHome = styled.div`
     background-image: url(${BgMobileHome});
     background-repeat: no-repeat;
     background-size: cover;
@@ -132,6 +134,9 @@ export const CardComponentStyled = styled.div`
     background: rgba(1, 1, 78, 0.1);
     box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
     p {
         padding-bottom: 10px;
     }
@@ -207,6 +212,7 @@ export const CardComponentStyledSecond = styled.div`
         @media(min-width: 972px) {
         img {
             display: block;
+           
         }
         
     }
@@ -222,8 +228,55 @@ export const CardContainer = styled.section`
 export const DivSeparetorStyled = styled.div`
     width: 200px;
     height: 1px;
+    margin-bottom: 20px;
     background-color: #000;
     @media(min-width: 972px) {
         width: 500px;
+    }
+`
+export const NavBrandStyled = styled(Navbar.Brand)`
+    img {
+        width: 170px;
+        height: 15px;
+    }
+`
+export const Header = styled(Container)`
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.25);
+`
+export const MainStyledLayout = styled.main`
+    padding-top: 6rem;
+`
+export const OffCanvasContainer = styled.div`
+    border: solid 1px;
+    border-color: #000;
+    border-radius: 20px;
+    margin: 20px;
+`
+export const CardComponentNav = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: rgba(1, 1, 78, 0.1);
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px;
+    img {
+        width: 38px;
+        height: 38px;
+        margin-left: 30px;
+    }
+    p {
+        margin: 0;
+        padding: 0;
     }
 `

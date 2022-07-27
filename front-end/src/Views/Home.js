@@ -2,10 +2,15 @@
 import Perg from '../img/Perf.jpg'
 import { FaCog, FaRegShareSquare } from "react-icons/fa";
 import LogoSecondBlack from '../img/SecondBlack.png'
-import { CardComponentStyled, ContainerHome, DivIconStyled, DivSectionHeader, DivStyledName, HaderStyled, LogoSecondImgStyled, MainsStyledHome } from '../styled/styled';
+import { ContainerHome, DivIconStyled, DivSectionHeader, DivStyledName, HaderStyled, LogoSecondImgStyled, MainsStyledHome } from '../styled/styled';
 import { ComponentCardView } from '../Componensts/ComponentCard';
-
+import { logoutUser } from '../services/logout';
+import { toast } from 'react-toastify'
 export function HomeView() {
+    const singOutUser = async () => {
+        await logoutUser()
+        toast.success('Deslogado com sucesso!')
+    }
     return (
         <ContainerHome>
             <HaderStyled>
@@ -18,7 +23,7 @@ export function HomeView() {
                 </DivSectionHeader>
                 <LogoSecondImgStyled src={LogoSecondBlack} alt='Logo SecondMind'/>
                 <DivSectionHeader>
-                    <DivIconStyled>
+                    <DivIconStyled onClick={singOutUser}>
                         <div>
                             <FaRegShareSquare />
                         </div>
