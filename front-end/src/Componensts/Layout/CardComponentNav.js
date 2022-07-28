@@ -34,7 +34,7 @@ export function CardComponentNavView() {
                 <img src={CronogramaHoras} alt='Controle de Horas' />
                 <p>Controle de Horas</p>
             </CardComponentNav>
-            <CardComponentNav>
+            <CardComponentNav as={Link} to='/lista-de-projetos'>
                 <img src={Projetos} alt='Projetos' />
                 <p>Projetos</p>
             </CardComponentNav>

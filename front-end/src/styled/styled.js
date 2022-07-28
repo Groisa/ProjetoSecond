@@ -565,6 +565,9 @@ export const ModalFormControl = styled(Form.Control)`
     border-color: #fff;
     color: #fff;
     display: flex;
+    ::placeholder {
+        color: #fff;
+    }
 `
 export const ModalFormControlSelect = styled(Form.Select)`
     width: 100%;

@@ -35,7 +35,7 @@ export function NewHourView() {
                     <img src={NewHour} alt='tela de minhas horas' />
                     <h1>Controle de Horas</h1>
                 </TitleStyled>
-                <DivSeparetorStyledPrimary></DivSeparetorStyledPrimary>
+                <DivSeparetorStyledPrimary/>
                 <ButtonNewOur onClick={handleShowModalNewData}>
                     <FaSearchPlus />
                     Novo Lançamento
@@ -69,7 +69,9 @@ export function NewHourView() {
                                         <Form.Label>Horas</Form.Label>
                                         <ModalFormControl
                                             required
+                                            placeholder='Horas'
                                             {...formik.getFieldProps('FormHoras')}
+                                            
                                         />
                                     </Form.Group>
                                 </Col>
@@ -116,6 +118,7 @@ export function NewHourView() {
                                     as="textarea"
                                     required
                                     {...formik.getFieldProps('FormObs')}
+                                    placeholder='Insira uma breve observação'
                                 />
                             </Form.Group>
                             <Form.Group className="mb-1" controlId="FormDate">
@@ -130,7 +133,7 @@ export function NewHourView() {
                         </Form>
                     </ModalBody>
                 </ModalStyled>
-                <DivSeparetorStyledPrimary></DivSeparetorStyledPrimary>
+                <DivSeparetorStyledPrimary/>
                 <SectionInputPesqDate>
                     <input value='00/00/00' />
                     <p>até</p>

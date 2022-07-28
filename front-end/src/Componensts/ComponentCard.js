@@ -29,7 +29,7 @@ export function ComponentCardView() {
                     </div>
                     <p>Controle de Horas</p>
                 </CardComponentStyledSecond>
-                <CardComponentStyledSecond>
+                <CardComponentStyledSecond as={Link} to='lista-de-projetos'>
                     <div>
                         <img src={Projetos} alt='Icone da tela de Projetos' />
                     </div>
