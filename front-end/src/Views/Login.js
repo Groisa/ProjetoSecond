@@ -52,7 +52,6 @@ export function LoginView() {
                         />
                     </FormGroupInput>
                     <button type='submit'>Entrar</button>
-                    <a href=''>Esqueceu a senha?</a>
                 </FormStyled>
             </StyledSectionLogin>
         </MainStyled>

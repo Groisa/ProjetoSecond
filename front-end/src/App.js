@@ -2,6 +2,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { auth } from "./services/firebase";
+import { BurnDownView } from "./Views/BurnDown";
 import { ClientView } from "./Views/ClientList";
 import { ControlHoursViews } from "./Views/ControlHours";
 import { HomeView } from "./Views/Home";
@@ -32,6 +33,7 @@ function App() {
       <Route path='/newHour' element={<NewHourView/>}/>
       <Route path='/lista-de-projetos' element={<ProjectListView/>}/>
       <Route path='/lista-de-clientes' element={<ClientView/>}/>
+      <Route path='/burnDown' element={<BurnDownView/>}/>
     </Routes>
   );
 }

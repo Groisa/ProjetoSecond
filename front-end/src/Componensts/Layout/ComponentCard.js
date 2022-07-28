@@ -1,10 +1,9 @@
-import { CardComponentStyled, CardComponentStyledSecond, CardContainer, CardSectionStyled, DivSeparetorStyled } from "../styled/styled";
-import MinhasHoras from '../img/MinhasHoras.png'
-import BurnDown from '../img/BurnDown.png'
-import CronogramaHoras from '../img/CronogramaHoras.png'
-import Projetos from '../img/Projetos.png'
-import Clientes from '../img/Clientes.png'
-import Users from '../img/Users.png'
+import { CardComponentStyled, CardComponentStyledSecond, CardContainer, CardSectionStyled, DivSeparetorStyled } from "../../styled/styled";
+import MinhasHoras from '../../img/MinhasHoras.png'
+import BurnDown from '../../img/BurnDown.png'
+import CronogramaHoras from '../../img/CronogramaHoras.png'
+import Projetos from '../../img/Projetos.png'
+import Clientes from '../../img/Clientes.png'
 import { Link } from 'react-router-dom'
 export function ComponentCardView() {
     return (
@@ -17,7 +16,7 @@ export function ComponentCardView() {
             </CardComponentStyled>
             <DivSeparetorStyled></DivSeparetorStyled>
             <CardSectionStyled>
-                <CardComponentStyledSecond>
+                <CardComponentStyledSecond as={Link} to='/burnDown'>
                     <div>
                         <img src={BurnDown} alt='Icone da tela de BurnDown' />
                     </div>
@@ -40,12 +39,6 @@ export function ComponentCardView() {
                         <img src={Clientes} alt='Icone da tela de Clientes' />
                     </div>
                     <p>Clientes</p>
-                </CardComponentStyledSecond>
-                <CardComponentStyledSecond>
-                    <div>
-                        <img src={Users} alt='Icone da tela de Users' />
-                    </div>
-                    <p>Usuários</p>
                 </CardComponentStyledSecond>
             </CardSectionStyled>
         </CardContainer>

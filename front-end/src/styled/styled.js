@@ -581,3 +581,21 @@ export const ModalFormControlSelect = styled(Form.Select)`
         width: 80%;
     }
 `
+export const FormStyledBurnDown = styled(Form)`
+    width: 322px;
+`
+export const ModalFormControlSelectBurnDown = styled(Form.Select)`
+    width: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+    border-color: #000;
+    color: #000;
+    display: flex;
+    option {
+        background-color: #3D3434;
+        width: 80%;
+    }
+`
+export const ImgGraficBurnDown = styled.img`
+
+`
