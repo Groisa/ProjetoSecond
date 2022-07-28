@@ -72,6 +72,7 @@ const FormStyled = styled.form`
         width: 50%;
         padding: 5px;
         border-radius: 15px;
+        margin-bottom: 20px;
     }
     a {
         font-size: .8rem;
