@@ -42,7 +42,7 @@ export function CardComponentNavView() {
                 <img src={Users} alt='Usuários' />
                 <p>Usuários</p>
             </CardComponentNav>
-            <CardComponentNav>
+            <CardComponentNav as={Link} to='/lista-de-clientes'>
                 <img src={Clientes} alt='Clientes' />
                 <p>Clientes</p>
             </CardComponentNav>

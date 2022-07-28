@@ -14,6 +14,8 @@ export function NewHourView() {
     const [showModalNewData, setShowModalNewData] = useState(false);
     const handleCloseModalNewData = () => setShowModalNewData(false);
     const handleShowModalNewData = () => setShowModalNewData(true);
+
+    
     const formik = useFormik({
         initialValues: {
             FormNome: '',

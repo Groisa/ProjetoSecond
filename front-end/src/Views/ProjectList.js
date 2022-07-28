@@ -178,32 +178,32 @@ export function ProjectListView() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td><StyledPin onClick={handleshowModalDetails}/> Projeto A</td>
+                            <td><StyledPin onClick={handleshowModalDetails} /> Projeto A</td>
                             <td>25/07/22</td>
                             <td>27/07/22</td>
                         </tr>
                         <tr>
-                            <td><StyledPin onClick={handleshowModalDetails}/> Projeto A</td>
+                            <td><StyledPin onClick={handleshowModalDetails} /> Projeto A</td>
                             <td>25/07/22</td>
                             <td>27/07/22</td>
                         </tr>
                         <tr>
-                            <td><StyledPin onClick={handleshowModalDetails}/> Projeto A</td>
+                            <td><StyledPin onClick={handleshowModalDetails} /> Projeto A</td>
                             <td>25/07/22</td>
                             <td>27/07/22</td>
                         </tr>
                         <tr>
-                            <td><StyledPin onClick={handleshowModalDetails}/> Projeto A</td>
+                            <td><StyledPin onClick={handleshowModalDetails} /> Projeto A</td>
                             <td>25/07/22</td>
                             <td>27/07/22</td>
                         </tr>
                         <tr>
-                            <td><StyledPin onClick={handleshowModalDetails}/> Projeto A</td>
+                            <td><StyledPin onClick={handleshowModalDetails} /> Projeto A</td>
                             <td>25/07/22</td>
                             <td>27/07/22</td>
                         </tr>
                         <tr>
-                            <td><StyledPin onClick={handleshowModalDetails}/> Projeto A</td>
+                            <td><StyledPin onClick={handleshowModalDetails} /> Projeto A</td>
                             <td>25/07/22</td>
                             <td>27/07/22</td>
                         </tr>
@@ -217,8 +217,8 @@ export function ProjectListView() {
                 <ModalStyled show={showModalDetails} onHide={handleCloseDetails}>
                     <ModalHeader closeButton>
                         <ModalTitle>
-                            <FaSearchPlus />
-                            <h1>Nova Sprint</h1>
+                            <img src={Projeto} alt='tela de minhas horas' />
+                            <h1>Controle de Horas</h1>
                         </ModalTitle>
                     </ModalHeader>
                     <ModalBody>

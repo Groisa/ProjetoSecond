@@ -35,7 +35,7 @@ export function ComponentCardView() {
                     </div>
                     <p>Projetos</p>
                 </CardComponentStyledSecond>
-                <CardComponentStyledSecond>
+                <CardComponentStyledSecond as={Link} to='/lista-de-clientes'>
                     <div>
                         <img src={Clientes} alt='Icone da tela de Clientes' />
                     </div>
