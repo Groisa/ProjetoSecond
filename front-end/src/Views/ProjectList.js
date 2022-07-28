@@ -45,7 +45,7 @@ export function ProjectListView() {
             <ContainerStyled>
                 <TitleStyled>
                     <img src={Projeto} alt='tela de minhas horas' />
-                    <h1>Controle de Horas</h1>
+                    <h1>Lista de Projetos</h1>
                 </TitleStyled>
                 <DivSeparetorStyledPrimary />
                 <ButtonNewOur onClick={handleshowModalNewProject}>
@@ -218,7 +218,7 @@ export function ProjectListView() {
                     <ModalHeader closeButton>
                         <ModalTitle>
                             <img src={Projeto} alt='tela de minhas horas' />
-                            <h1>Controle de Horas</h1>
+                            <h1>Lista de Projetos</h1>
                         </ModalTitle>
                     </ModalHeader>
                     <ModalBody>
